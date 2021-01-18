@@ -1,25 +1,22 @@
 {
-  "name": "realtime.io",
-  "version": "%PACKAGEVERSION%",
-  "description": "TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project.",
+  "name": "@mkocyigit01/realtime.io",
+  "version": "1.0.0",
+  "description": "Real time data streaming & socket programming library",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://umurkirtasiye@dev.azure.com/umurkirtasiye/Artifacts/_git/Realtime.IO"
+    "url": "git+https://github.com/muhammetkocyigit0/realtime.io.git"
   },
-  "keywords": [
-    "realtime",
-    "data",
-    "communication",
-    "server",
-    "client",
-    "broadcast"
-  ],
-  "author": "Umur",
-  "license": "MIT",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/muhammetkocyigit0/realtime.io/issues"
+  },
+  "homepage": "https://github.com/muhammetkocyigit0/realtime.io#readme",
   "dependencies": {
     "chalk": "^4.1.0",
     "crypto": "^1.0.1",
