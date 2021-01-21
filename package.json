@@ -1,6 +1,6 @@
 {
   "name": "@mkocyigit01/realtime.io",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Real time data streaming & socket programming library",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/muhammetkocyigit0/realtime.io.git"
   },
-  "keywords": [],
+  "keywords": ["socket", "socket.io", "client", "server","socket.io-client", "realtime", "realtime-io", "realtime.io", "stream", "streaming", "transfer", "communication"],
   "author": "",
   "license": "ISC",
   "bugs": {
