@@ -1,6 +1,6 @@
 {
   "name": "realtime.io",
-  "version": "1.0.3",
+  "version": "1.0.1",
   "description": "Real time data streaming & socket programming library",
   "main": "index.js",
   "scripts": {
