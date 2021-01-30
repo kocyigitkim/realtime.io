@@ -1,5 +1,5 @@
 {
-  "name": "@mkocyigit01/realtime.io",
+  "name": "realtime.io",
   "version": "1.0.3",
   "description": "Real time data streaming & socket programming library",
   "main": "index.js",
