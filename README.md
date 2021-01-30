@@ -11,8 +11,8 @@ Steps:
 
 # 1. Installation
 
- - npm install @mkocyigit01/realtime-io
- - yarn add @mkocyigit01/realtime-io
+ - npm install realtime.io
+ - yarn add realtime.io
  
 # 2. Software dependencies
  - socket.io
@@ -28,7 +28,7 @@ Steps:
 -- A. _How To Create & Listen Server_
 
     // Import RealTime.IO Library
-    const realtimeio = require('@mkocyigit01/realtime-io');
+    const realtimeio = require('realtime.io');
     // Define Server Options
     // You can inspect server options from library
     const serverOptions = new realtimeio.server.RealtimeIOServerOptions();
@@ -58,7 +58,7 @@ Then everything will be nice :)
 -- D. How To Create Client ?
 
     // Import RealTime.IO Library
-    const realtimeio = require('@mkocyigit01/realtime-io');
+    const realtimeio = require('realtime.io');
     // Define Client Options
     // You can inspect client options from library
     const clientOptions = new realtimeio.server.RealtimeIOClientOptions();
