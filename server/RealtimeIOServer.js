@@ -152,6 +152,9 @@ class RealtimeIOServer {
         if (!handshakeResult || !handshakeResult.success) {
           session.client.disconnect();
         }
+        else{
+          _server.authenticated.invoke([session]);
+        }
       });
     });
 
