@@ -1,5 +1,4 @@
 const chalk = require("chalk");
-const NodeCache = require("node-cache");
 const { Manager } = require("socket.io-client");
 const RealtimeIOClientOptions = require("./RealtimeIOClientOptions");
 const RealtimeEvent = require("../RealtimeEvent");
@@ -11,7 +10,6 @@ class RealtimeIOClient {
   constructor(options) {
     this.options = options;
     this.clientObjects = [];
-    this.cache = new NodeCache({ stdTTL: 300 });
     this.connected = new RealtimeEvent();
     this.disconnected = new RealtimeEvent();
     this.received = new RealtimeEvent();
@@ -56,8 +54,6 @@ class RealtimeIOClient {
             )
           );
         }
-      } else if (mode == "wait") {
-        _client.cache.set(id, message);
       } else if (mode == "normal") {
       }
     }

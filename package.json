@@ -1,8 +1,7 @@
 {
-  "name": "@mkocyigit01/realtime-io",
-  "version": "1.0.0",
-  "description": "Realtime.IO",
-  "author": "muhammetkocyigit0@gmail.com",
+  "name": "realtime.io-rn",
+  "version": "1.0.5",
+  "description": "Real time data streaming & socket programming library for React-Native",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,30 +10,31 @@
     "type": "git",
     "url": "git+https://github.com/muhammetkocyigit0/realtime.io.git"
   },
+  "keywords": [
+    "socket",
+    "socket.io",
+    "client",
+    "server",
+    "socket.io-client",
+    "realtime",
+    "realtime-io",
+    "realtime.io",
+    "stream",
+    "streaming",
+    "transfer",
+    "communication",
+    "react-native",
+    "native"
+  ],
+  "author": "",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/muhammetkocyigit0/realtime.io/issues"
   },
   "homepage": "https://github.com/muhammetkocyigit0/realtime.io#readme",
-  "keywords": [
-    "realtime",
-    "data",
-    "communication",
-    "server",
-    "client",
-    "broadcast"
-  ],
-  "license": "MIT",
   "dependencies": {
     "chalk": "^4.1.0",
-    "crypto": "^1.0.1",
-    "express": "^4.17.1",
-    "http": "^0.0.1-security",
-    "node-cache": "^5.1.2",
-    "socket.io": "^3.0.4",
     "socket.io-client": "^3.0.4",
     "uuid": "^8.3.2"
-  },
-  "publishConfig": {
-    "registry": "https://pkg.npm.com"
   }
 }
