@@ -26,7 +26,7 @@ Steps:
  # 3. Usage
 
 -- A. _How To Create & Listen Server_
-
+```js
     // Import RealTime.IO Library
     const realtimeio = require('realtime.io');
     // Define Server Options
@@ -36,9 +36,9 @@ Steps:
     const server = new realtimeio.server.RealtimeIOServer(serverOptions);
     // Listen
     server.listen();
-    
+```    
 -- B. _How To Define Server Object_
-
+```js
     class NotificationServerObject extends realtimeio.server.RealtimeIOServerObject{
 	    constructor(server){
 		    super('notification', server);
@@ -47,16 +47,18 @@ Steps:
 		    console.log(['Type: ', type, 'Title: ', title, 'Message: ', message].join(' '));
 	    }
     }
+```
 -- C. How To Use Notification Server Object ?
-
+```js
     // Listen
     server.listen();
     // Write this code after listen server expression
     const notificationServer = new NotificationServerObject(server);
+```
 Then everything will be nice :)
 
 -- D. How To Create Client ?
-
+```js
     // Import RealTime.IO Library
     const realtimeio = require('realtime.io');
     // Define Client Options
@@ -66,23 +68,21 @@ Then everything will be nice :)
     const client = new realtimeio.client.RealtimeIOClient(clientOptions);
     // Connect to server
     client.connect();
-
+```
 -- E. How To Define Client Object?
-
+```js
     class NotificationClientObject extends realtimeio.client.RealtimeIOClientObject{
 		constructor(client){
 			super('notification', client);
 		}
 		showNotification(type, title, message){}
     }
+```
 -- F. How To Send A New Notification ?
-
+```js
     // Connect to server
     client.connect();
     // Send new notification
     const notificationObject = new NotificationClientObject(client);
     notificationObject.showNotification('info', 'Example #1', 'Hello world :)');
-
-### If you want to contact with me please follow these links
-- Gmail: muhammetkocyigit0@gmail.com
-- Github: https://www.github.com/muhammetkocyigit0 
+```
