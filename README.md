@@ -25,7 +25,7 @@ Steps:
  - node-cache
  # 3. Usage
 
--- A. _How To Create & Listen Server_
+##### A. _How To Create & Listen Server_
 ```js
     // Import RealTime.IO Library
     const realtimeio = require('realtime.io');
@@ -37,7 +37,7 @@ Steps:
     // Listen
     server.listen();
 ```    
--- B. _How To Define Server Object_
+##### B. _How To Define Server Object_
 ```js
     class NotificationServerObject extends realtimeio.server.RealtimeIOServerObject{
 	    constructor(server){
@@ -48,7 +48,7 @@ Steps:
 	    }
     }
 ```
--- C. How To Use Notification Server Object ?
+##### C. How To Use Notification Server Object ?
 ```js
     // Listen
     server.listen();
@@ -57,7 +57,7 @@ Steps:
 ```
 Then everything will be nice :)
 
--- D. How To Create Client ?
+##### D. How To Create Client ?
 ```js
     // Import RealTime.IO Library
     const realtimeio = require('realtime.io');
@@ -69,7 +69,7 @@ Then everything will be nice :)
     // Connect to server
     client.connect();
 ```
--- E. How To Define Client Object?
+##### E. How To Define Client Object?
 ```js
     class NotificationClientObject extends realtimeio.client.RealtimeIOClientObject{
 		constructor(client){
@@ -78,7 +78,7 @@ Then everything will be nice :)
 		showNotification(type, title, message){}
     }
 ```
--- F. How To Send A New Notification ?
+##### F. How To Send A New Notification ?
 ```js
     // Connect to server
     client.connect();
