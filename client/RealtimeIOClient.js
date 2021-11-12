@@ -1,6 +1,5 @@
 const chalk = require("chalk");
 const NodeCache = require("node-cache");
-const { Manager } = require("socket.io-client");
 const RealtimeIOClientOptions = require("./RealtimeIOClientOptions");
 const RealtimeEvent = require("../RealtimeEvent");
 class RealtimeIOClient {
@@ -23,10 +22,10 @@ class RealtimeIOClient {
     const _client = this;
     if (this.options.debug)
       console.log(chalk.black(chalk.bgYellow("Connecting server...")));
-    this.manager = new Manager(
+    /*this.manager = new Manager(
       "ws://" + this.options.host + ":" + this.options.port
-    );
-    this.socket = this.manager.socket(this.options.path);
+    );*/
+    this.socket = require("socket.io-client")(`ws://${this.options.host}:${this.options.port}${this.options.path}`); //this.manager.socket(this.options.path);
 
     function processMessageReceive(message) {
       const { type, id, action, args } = message;
@@ -74,7 +73,7 @@ class RealtimeIOClient {
       _client.disconnected.invoke(args);
     });
     this.on("message", (rawMessage) => {
-      var message =JSON.parse(_client.options.encoder.decode(rawMessage));
+      var message = JSON.parse(_client.options.encoder.decode(rawMessage));
       if (_client.options.debug)
         console.log(
           chalk.black(chalk.bgYellow("Received: " + JSON.stringify(message)))
@@ -83,7 +82,7 @@ class RealtimeIOClient {
       _client.received.invoke(message);
     });
     this.on("auth", (rawMessage) => {
-        var message = JSON.parse(_client.options.encoder.decode(rawMessage));
+      var message = JSON.parse(_client.options.encoder.decode(rawMessage));
       if (_client.options.debug) {
         console.log(
           chalk.black(
@@ -95,12 +94,12 @@ class RealtimeIOClient {
       if (message && message.success) {
         _client.authenticated.invoke([message]);
       }
-      else{
-          _client.disconnect();
+      else {
+        _client.disconnect();
       }
     });
     this.on("error", (rawMessage) => {
-        var message = JSON.parse(_client.options.encoder.decode(rawMessage));
+      var message = JSON.parse(_client.options.encoder.decode(rawMessage));
       _client.serverError.invoke([message]);
       if (_client.options.showErrors) {
         console.log(
@@ -142,12 +141,12 @@ class RealtimeIOClient {
       parameters: this.options.authenticator,
     });
   }
-  emit(path, data){
+  emit(path, data) {
     var rawData = JSON.stringify(data);
     var encodedData = this.options.encoder.encode(rawData);
     return this.socket.emit(path, encodedData);
   }
-  disconnect(){
+  disconnect() {
     this.socket.disconnect();
   }
   registerClientObject(client) {

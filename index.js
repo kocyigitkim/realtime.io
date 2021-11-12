@@ -6,9 +6,9 @@ module.exports.server = {
     RealtimeIOSessionManager: require('./server/RealtimeIOSessionManager')
 };
 module.exports.client = {
-    RealtimeIOClient: require('./client/RealtimeIOClient'),
+    RealtimeIOClient: require('./client/RealtimeIOClient').RealtimeIOClient,
     RealtimeIOClientObject: require('./client/RealtimeIOClientObject'),
-    RealtimeIOClientOptions: require('./client/RealtimeIOClientOptions')
+    RealtimeIOClientOptions: require('./client/RealtimeIOClientOptions').RealtimeIOClientOptions
 };
 module.exports.auth = {
     RealtimeIOAuthenticator: require('./auth/RealtimeIOAuthenticator'),

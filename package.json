@@ -1,6 +1,6 @@
 {
   "name": "realtime.io",
-  "version": "1.0.1",
+  "version": "1.0.8",
   "description": "Real time data streaming & socket programming library",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,20 @@
     "type": "git",
     "url": "git+https://github.com/muhammetkocyigit0/realtime.io.git"
   },
-  "keywords": ["socket", "socket.io", "client", "server","socket.io-client", "realtime", "realtime-io", "realtime.io", "stream", "streaming", "transfer", "communication"],
+  "keywords": [
+    "socket",
+    "socket.io",
+    "client",
+    "server",
+    "socket.io-client",
+    "realtime",
+    "realtime-io",
+    "realtime.io",
+    "stream",
+    "streaming",
+    "transfer",
+    "communication"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -23,8 +36,8 @@
     "express": "^4.17.1",
     "http": "^0.0.1-security",
     "node-cache": "^5.1.2",
-    "socket.io": "^3.0.4",
-    "socket.io-client": "^3.0.4",
+    "socket.io": "^4.0.1",
+    "socket.io-client": "^4.0.1",
     "uuid": "^8.3.2"
   }
 }
